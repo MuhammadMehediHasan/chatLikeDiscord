@@ -16,17 +16,21 @@ body {
     color: $text-main;
 
     display: flex;
-    align-items: center;
+    align-items: baseline;
     justify-content: space-between;
 
     position: sticky;
     top: 0;
+    z-index: 1;
 
-    .add {
+    box-shadow: 0 0 10px 5px $background-secondary;
+
+    .time {
         // background-color: $background-primary;
+        font-size: 1rem;
         color: $text-secondary;
-        width: 30px;
-        height: 30px;
+        // width: 30px;
+        // height: 30px;
         padding: .6rem;
         border-radius: 50%;
         cursor: pointer;
@@ -55,7 +59,74 @@ body {
         .body {
             background-color: $background-chat;
             height: 100%;
+            padding: .5rem;
+            overflow-y: scroll;
+            &::-webkit-scrollbar {
+                background-color: transparent;
+            }
+
+            hr {
+                width: 25%;
+                border: 1px solid rgba($text-main, 0.1);
+            }
+
+            .usr_msg {
+                // border: 1px solid white;
+                padding: 1rem;
+                margin: 1rem 0;
+
+
+
+                .usr {
+                    // border: 1px solid limegreen;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    .avater {
+                        // border: 1px solid orange;
+                        width: 45px;
+                        height: 45px;
+                        border-radius: 50%;
+                    }
+                    .same {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                    }
+                    .txt {
+                        font-size: 1.3rem;
+                        text-align: left;
+                        padding: 0 1rem;
+
+                        &.name {
+                            font-weight: bold;
+                            color: $text-main;
+                        }
+
+                        &.date {
+                            font-size: 1rem;
+                            color: $text-secondary;
+                        }
+                    }
+
+                    
+                    
+                }
+
+                .content {
+                    // border: 1px solid red;
+                    color: $text-tools;
+                    padding: .5rem;
+                }
+
+                &:hover {
+                    background-color: $background-secondary;
+                }
+
+            }   
             
+
             
         }
 
@@ -117,4 +188,8 @@ body {
         }
 
     }
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
