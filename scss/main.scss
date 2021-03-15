@@ -1,0 +1,120 @@
+@import './partial/color';
+@import './partial/font';
+
+body {
+    background-color: $background-primary;
+    font-family: $font-fira;
+    margin: 0;
+    height: 100vh;
+}
+
+.header {
+    background-color: $background-secondary;
+    font-size: 1.6rem;
+    padding: .6rem 1.3rem;
+    font-weight: bolder;
+    color: $text-main;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: sticky;
+    top: 0;
+
+    .add {
+        // background-color: $background-primary;
+        color: $text-secondary;
+        width: 30px;
+        height: 30px;
+        padding: .6rem;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background-color .4s ease;
+
+        &:hover {
+            color: $text-main;
+        }
+    }
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    height: 80%;
+
+    .chat {
+        height: 100%;
+        position: relative;
+        // border: 1px solid red;
+
+        .body {
+            background-color: $background-chat;
+            height: 100%;
+            
+            
+        }
+
+        .msg {
+
+            background-color: $background-chat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            // border: 1px solid red;
+            
+            .text {
+                background-color: $background-input;
+                border: none;
+                outline: none;
+                width: 90%;
+                height: 25px;
+                padding: .7rem .8rem;
+                font-size: 1rem;
+                border-radius: .5rem;
+                margin-bottom: 3rem;
+                color: $text-secondary;
+            }
+            
+            .tools {
+                // border: 1px solid yellowgreen;
+                height: 30px;
+                padding: .5rem;
+                position: absolute;
+                bottom: 50%;
+                right: 4%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                
+
+                .btn {
+                    background: none;
+                    border: none;
+                    color: $text-tools;
+                    font-size: 1.3rem;
+                    // border: 1px solid goldenrod;
+                    margin: 0 .3rem;
+                    transition: color .1s ease;
+
+                    &:hover {
+                        color: $text-main;
+                    }
+
+                    .send {
+        
+                    }
+                }
+
+
+            }
+
+        }
+
+    }
+}
